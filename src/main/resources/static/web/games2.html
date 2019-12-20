@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Salvo</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body class="black">
+<div class="container">
+<form id="login-form" onsubmit="return false">
+    <div id="login-info">
+    <div class="input-field col s6">
+        <input id="name" type="text" class="validate white-text">
+        <label for="name" class="white-text">Name</label>
+    </div>
+
+    <div class="input-field col s12">
+        <input id="password" type="password" class="validate white-text">
+        <label for="password" class="white-text">Password</label>
+    </div>
+    </div>
+    <button id="login-btn" type="button" class="white btn-small black-text">Log in</button>
+    <button id="signin-btn" type="button" class="white btn-small black-text">Sign in</button>
+    <h5 class="white-text" id="player"></h5>
+    <button id="logout-btn" type="button" class="white btn-small black-text">Log out</button>
+    </form>
+
+    <div id="errorMessages">
+        <h5 id="blankField" class="red-text">You must complete all the fields</h5>
+        <h5 id="wrongInfo" class="red-text">Your email or password is incorrect</h5>
+        <h5 id="usedUser" class="red-text">This account is already in use</h5>
+    </div>
+</div>
+
+<div class="container red darken-4">
+    <h2 class="white-text center-align">Games</h2>
+    <div class='right-align'><button class="white btn-small black-text" id="newGame">Create a new game</button></div>
+    <ul id="lista" class="collection"></ul>
+    </div>
+
+<div class="container" id="tableLeaderBoard">
+   <table class="centered grey darken-3">
+       <thead id="headLeaderBoard" class="red darken-4 white-text center-align">
+       <th>Name</th> <th>Total</th> <th>Won</th> <th>Lost</th> <th>Tied</th> <th>Games Played</th>
+       </thead>
+
+       <tbody id="bodyLeaderBoard">
+       </tbody>
+
+   </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="games2.js"></script>
+</body>
+</html>

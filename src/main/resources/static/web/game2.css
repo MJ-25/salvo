@@ -1,0 +1,15 @@
+.ship-piece{
+background-color: red;
+}
+
+.salvo-piece{
+background-color: green;
+}
+
+.shipHit{
+background-color: purple;
+}
+
+#div1{
+background-color: blue;
+}
